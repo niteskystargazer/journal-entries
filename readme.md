@@ -1,4 +1,4 @@
-# <a href="https://niteskystargazer.github.io/journal-entries>Journal Entry App</a>
+# Journal Entry App
 
 A personal journal where users can write, edit, and delete their journal entries securely.
 
