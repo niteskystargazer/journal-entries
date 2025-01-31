@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Your Journal Entries</h1>
+    <a href="/entries/new">Create New Entry</a>
+    <form action="/logout" method="POST"><button type="submit">Logout</button></form>
+    <ul>
+        <% entries.forEach(entry => { %>
+            <li>
+                <strong><%= entry.title %></strong> - <%= entry.content %>
+                <a href="/entries/<%= entry._id %>/edit">Edit</a>
+                <form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

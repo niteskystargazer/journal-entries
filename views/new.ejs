@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Entry</title>
+</head>
+<body>
+    <h1>Create a New Journal Entry</h1>
+    <form action="/entries" method="POST">
+        <label>Title: <input type="text" name="title" required></label><br>
+        <label>Content: <textarea name="content" required></textarea></label><br>
+        <button type="submit">Create</button>
+    </form>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

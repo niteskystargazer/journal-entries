@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Entry</title>
+</head>
+<body>
+    <h1>Edit Journal Entry</h1>
+    <form action="/entries/<%= entry._id %>?_method=PUT" method="POST">
+        <label>Title: <input type="text" name="title" value="<%= entry.title %>" required></label><br>
+        <label>Content: <textarea name="content" required><%= entry.content %></textarea></label><br>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
